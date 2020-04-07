@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #000;
+}
+</style>
+	<title>Arpit's Pizza parlour</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="181370.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script>
+
+	    function showmessage(){
+			var x = document.forms["myForm"]["name"].value;
+			var y = document.forms["myForm"]["email"].value;
+			var z = document.forms["myForm"]["number"].value;
+			var w = document.forms["myForm"]["address"].value;
+			var v = document.forms["myForm"]["zip"].value;
+			if (x == "") {
+				alert("Name must be filled out");
+			return false;
+			}
+			else if (y == ""){
+				alert("Email must be filled out");
+			}
+			else if (z == ""){
+				alert("Mobile number must be filled out");
+			}
+			else if (w == ""){
+				alert("Address must be filled out");
+			}
+			else if (v = ""){
+				alert("ZIP must be filled out");
+			}
+			else{
+				alert("Thank you, You may now proceed!!!");
+		}
+		
+	}
+	</script>
+</head>
+<body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<div class="container">
+<br>
+	<b><h1>Order your pizza @ Arpit's</h1></b>
+
+	<br>
+	<b><h2>Enter details : </h2></b><br>
+	<div class = "cont">
+		<form name = "myForm">
+			<h4>Name: <input type = "text" name = "name" required>
+				<br><br>
+			Email-id: <input type = "text" name = "email" required>
+			<br><br>
+			Mobile Number: <input type = "number" name = "number" required>
+			<br><br>
+			Address: <input type = "textarea" name = "address" required>
+			<br><br>
+			ZIP: <input type = "number" name = "zip" required>
+		</h4>
+			<br><br>
+			<input type = "submit" value = "Submit" onclick = "showmessage()">
+		</form>
+	</div>
+	<br>
+	<h2>(Select options to build your Order)</h2>
+	<br>
+	<div id="sizetable">
+		<h3 class="tablehead">Select size*:</h3>
+		<div class="menu initiallyHidden">	
+			<input type="radio" name="size" value="Personal" required> Personal
+			<input type="radio" name="size" value="Medium"> Medium
+			<input type="radio" name="size" value="Large"> Large
+			<input type="radio" name="size" value="Extra-Large"> Extra-Large
+		</div>
+	</div>
+	<br>
+	<b><div id="cheesetable">
+		<h3 class="tablehead">Select cheese*:</h3>
+		<div class="menu initiallyHidden">	
+			<input type="radio" name="cheese" value="No" required> No Cheese
+			<input type="radio" name="cheese" value="Regular"> Regular
+			<input type="radio" name="cheese" value="Extra"> Extra Cheese
+		</div>
+	</div>
+	<br>
+	<div id="crusttable">
+		<h3 class="tablehead">Select crust*:</h3>
+		<div class="menu initiallyHidden">	
+			<input type="radio" name="crust" value="Plain" required> Plain Crust
+			<input type="radio" name="crust" value="Garlic Butter"> Garlic Butter Crust
+			<input type="radio" name="crust" value="Cheese-Stuffed"> Cheese-Burst Crust
+			<input type="radio" name="crust" value="Spicy"> Spicy Crust
+		</div>
+	</div>
+	<br>
+	<div id="saucetable">
+		<h3 class="tablehead">Select dip (extra 2$)*:</h3>
+		<div class="menu initiallyHidden">	
+			<input type="radio" name="sauce" value="Marinara" required> Cheese dip
+			<input type="radio" name="sauce" value="White"> White dip
+			<input type="radio" name="sauce" value="Barbecue"> Barbecue dip
+			<input type="radio" name="sauce" value="No"> Salsa dip
+		</div>
+	</div>
+	<br>
+	<div id="meattable">
+		<h3 class="tablehead">Select your choice of meat(s):</h3>
+		<div class="menu initiallyHidden">
+			<input type="checkbox" name="meat" value="Pepperoni"> Pepperoni
+			<input type="checkbox" name="meat" value="Sausage"> Sausage
+			<input type="checkbox" name="meat" value="Canadian Bacon"> Canadian Bacon
+			<input type="checkbox" name="meat" value="Ground Beef"> Ground Beef
+			<input type="checkbox" name="meat" value="Anchovies"> Anchovies
+			<input type="checkbox" name="meat" value="Chicken"> Chicken
+		</div>
+	</div>
+	<br>
+	<div id="vegtable">
+		<h3 class="tablehead">Select your choice of veggie(s):</h3>
+		<div class="menu initiallyHidden">
+			<input type="checkbox" name="veg" value="Paneer"> Paneer
+			<input type="checkbox" name="veg" value="Onions"> Onions
+			<input type="checkbox" name="veg" value="Olives"> Black Olives
+			<input type="checkbox" name="veg" value="Capsicum"> Capsicum
+			<input type="checkbox" name="veg" value="Mushrooms"> Mushrooms
+			<input type="checkbox" name="veg" value="Corn"> Golden Corn
+			<input type="checkbox" name="veg" value="Jalapeneo"> Jalapeneo
+		</div>
+	</div>
+	<br><b>
+	<br>
+	<div id = "quantity">
+		<h3 class = "tablehead">Select Number of Pizza(s): </h3>
+		</p><input type = number value = "pizzaNo" id = "pzaNo" name = "pzaNo"> <br>
+	</div>
+	<br>
+	<br>
+	<button id="calc" type="submit" onclick="invoice()">Submit order</button>
+	<br><br>
+	<table class="pizza" style="width: 20%;" border="1" cellpadding="5">
+		<tbody>
+			<tr>
+				<td id="size"></td>
+				<td id="sizeprice"></td>
+			</tr>
+			<tr>
+				<td id="crust"></td>
+				<td id="crustprice"></td>
+			</tr>
+			<tr>
+				<td id="cheese"></td>
+				<td id="cheeseprice"></td>
+			</tr>
+			<tr>
+				<td id="sauce"></td>
+				<td id="sauceprice"></td>
+			</tr>
+			<tr>
+				<td id="meat"></td>
+				<td id="meatprice"></td>
+			</tr>
+			<tr>
+				<td id="veg"></td>
+				<td id="vegprice"></td>
+			</tr>
+			<tr>
+
+			<tr>
+			  <td><strong>TOTAL PRICE: $</strong></td>
+				<td id="totalprice"></td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<br>
+</div>
+<br>
+<br>
+	</tbody>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+<script src="181370.js"></script>
+</body>
+</html>
