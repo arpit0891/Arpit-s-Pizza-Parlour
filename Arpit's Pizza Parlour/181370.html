@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: green;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -61,9 +75,11 @@ body {
 		
 	}
 	</script>
+		        <link rel = "icon" href ="logo.png" 
+        type = "image/x-icon">
 </head>
 <body>
-
+<div class="foreground">
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <script>
 //Get the button
@@ -121,7 +137,7 @@ function topFunction() {
 		</div>
 	</div>
 	<br>
-	<b><div id="cheesetable">
+	<div id="cheesetable">
 		<h3 class="tablehead">Select cheese*:</h3>
 		<div class="menu initiallyHidden">	
 			<input type="radio" name="cheese" value="No" required> No Cheese
@@ -174,17 +190,20 @@ function topFunction() {
 			<input type="checkbox" name="veg" value="Jalapeneo"> Jalapeneo
 		</div>
 	</div>
-	<br><b>
+	<br>
 	<br>
 	<div id = "quantity">
 		<h3 class = "tablehead">Select Number of Pizza(s): </h3>
 		</p><input type = number value = "pizzaNo" id = "pzaNo" name = "pzaNo"> <br>
 	</div>
+
 	<br>
 	<br>
-	<button id="calc" type="submit" onclick="invoice()">Submit order</button>
+	<button class="button" id="calc" type="submit" onclick="invoice()">Place order</button>
 	<br><br>
 	<table class="pizza" style="width: 20%;" border="1" cellpadding="5">
+	
+</div>
 		<tbody>
 			<tr>
 				<td id="size"></td>
@@ -199,7 +218,7 @@ function topFunction() {
 				<td id="cheeseprice"></td>
 			</tr>
 			<tr>
-				<td id="sauce"></td>
+			 	<td id="sauce"></td>
 				<td id="sauceprice"></td>
 			</tr>
 			<tr>

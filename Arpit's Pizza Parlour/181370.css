@@ -2,12 +2,20 @@
 .menu {
 	margin-left:20px;
 }
+.foreground {
+   background: rgba(255, 255, 255, 0.7); 
 
+    margin: auto;
+    position: absolute;
+ left: 10%;
+    width: 50%;
+    min-height: 285px;
+}
 body {
   background-image: url('back.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed; 
-  background-size: 100% 100%;
+  background-size: 100%;
 }
 .cont {
   width: 200px;
