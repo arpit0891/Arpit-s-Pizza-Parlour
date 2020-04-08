@@ -101,6 +101,7 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+<
 </script>
 <div class="container">
 <br>
@@ -156,16 +157,7 @@ function topFunction() {
 		</div>
 	</div>
 	<br>
-	<div id="saucetable">
-		<h3 class="tablehead">Select dip (extra 2$)*:</h3>
-		<div class="menu initiallyHidden">	
-			<input type="radio" name="sauce" value="Marinara" required> Cheese dip
-			<input type="radio" name="sauce" value="White"> White dip
-			<input type="radio" name="sauce" value="Barbecue"> Barbecue dip
-			<input type="radio" name="sauce" value="No"> Salsa dip
-		</div>
-	</div>
-	<br>
+
 	<div id="meattable">
 		<h3 class="tablehead">Select your choice of meat(s):</h3>
 		<div class="menu initiallyHidden">
@@ -192,6 +184,17 @@ function topFunction() {
 	</div>
 	<br>
 	<br>
+			<div id="saucetable">
+		<h3 class="tablehead">Select dip (extra 2$)*:</h3>
+		<div class="menu initiallyHidden">	
+			<input type="radio" name="sauce" value="Marinara" required> Cheese dip
+			<input type="radio" name="sauce" value="White"> White dip
+			<input type="radio" name="sauce" value="Barbecue"> Barbecue dip
+			<input type="radio" name="sauce" value="No"> Salsa dip
+		</div>
+	</div>
+	<br>
+	<br>
 	<div id = "quantity">
 		<h3 class = "tablehead">Select Number of Pizza(s): </h3>
 		</p><input type = number value = "pizzaNo" id = "pzaNo" name = "pzaNo"> <br>
@@ -201,7 +204,7 @@ function topFunction() {
 	<br>
 	<button class="button" id="calc" type="submit" onclick="invoice()">Place order</button>
 	<br><br>
-	<table class="pizza" style="width: 20%;" border="1" cellpadding="5">
+	<table class="pizza" style="width: 50%;" border="1" cellpadding="5">
 	
 </div>
 		<tbody>

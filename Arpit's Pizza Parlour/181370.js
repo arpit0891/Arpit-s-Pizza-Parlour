@@ -105,7 +105,7 @@ function invoice() {
 	$("#veg").html(vegDisplay);
 	$("#vegprice").html("+"+vegPrice+".00");
 	$("#pizza").html(noPizza);
-	$("#totalprice").html(" $"+totalPrice+".00");
+	$("#totalprice").html(totalPrice+".00");
 	
 	
 	
